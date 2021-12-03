@@ -42,7 +42,7 @@
 
     <header>
         <h1>LIVRE D'OR Connexion</h1>
-        <a href="Index.php">Index</a>
+        <a href="index.php">Index</a>
     </header>
 <!-- /////////////formulaire de connexion\\\\\\\\\\\ -->
         <div class="container">
