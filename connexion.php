@@ -2,7 +2,7 @@
     session_start();
 
         /*  ///////// connexion base de donées et requètes  \\\\\\\\  */
-    $bdd = mysqli_connect("localhost","root","root","livreor");mysqli_set_charset($bdd,"UTF8");
+    $bdd = mysqli_connect("localhost:3306","root66","root66","mathieu-tatat_livre-or");mysqli_set_charset($bdd,"UTF8");
     $sql = mysqli_query($bdd,"SELECT * FROM `utilisateurs`");
     $users = mysqli_fetch_all($sql);
 

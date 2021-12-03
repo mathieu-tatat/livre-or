@@ -44,7 +44,7 @@ header("location: index.php");
 
         <div class="containerLO">
             <?php  
-                $bdd = mysqli_connect("localhost","root","root","livreor");mysqli_set_charset($bdd,"UTF8");
+                $bdd = mysqli_connect("localhost:3306","root66","root66","mathieu-tatat_livre-or");mysqli_set_charset($bdd,"UTF8");
                 $req = mysqli_query($bdd,"SELECT utilisateurs.login, commentaires.commentaire, commentaires.date FROM utilisateurs INNER JOIN commentaires ON utilisateurs.id = commentaires.id_utilisateur ");
                 $coms = mysqli_fetch_all($req);
             ?>   

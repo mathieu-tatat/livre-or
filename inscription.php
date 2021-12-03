@@ -2,7 +2,7 @@
 session_start();
 
 // connexion à la base de données
-$bdd = mysqli_connect("localhost","root","root","livreor");mysqli_set_charset($bdd,"UTF8");
+$bdd = mysqli_connect("localhost:3306","root66","root66","mathieu-tatat_livre-or");mysqli_set_charset($bdd,"UTF8");
 $login = $_POST['username'];  
 $password = $_POST['password'];
 $confirmation = $_POST['confirmation']; 
