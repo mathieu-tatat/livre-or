@@ -3,7 +3,7 @@ session_start();
 
  /////////////connexion base de donné et requetes\\\\\\\\\\\ 
   $user = $_SESSION['username'];
-  $bdd = mysqli_connect("localhost:3306","root66","root66","mathieu-tatat_livre-or");mysqli_set_charset($bdd,"UTF8");
+  $bdd = mysqli_connect("localhost","root","root","livreor");mysqli_set_charset($bdd,"UTF8");
   $requete = mysqli_query($bdd,"SELECT * FROM `utilisateurs` ");
   $bd = mysqli_fetch_all($requete, MYSQLI_ASSOC); 
 
@@ -65,19 +65,20 @@ session_start();
         
       /////////////condition affichage commentaire et redirection vers livre-or\\\\\\\\\\\ -->
       
-        if (empty($_POST["com"])){
-          echo"<p>champs vide</p>";
-          }
-          else{
-            $sql = mysqli_query($bdd,"INSERT INTO commentaires (commentaire, id_utilisateur, date) VALUES ('$com', '$id_user', NOW())");
-            header("Location:livre-or.php");
-          } 
 ?>
 
 <!-- /////////////formulaire pour poster un commentaire\\\\\\\\\\\ -->
         <div class="container">
         <form action="" method="post">
-
+        <!-- /////////////condition affichage commentaire et redirection vers livre-or\\\\\\\\\\\ -->
+        <?php
+          if (empty($_POST["com"])){}
+          
+          else{
+            $sql = mysqli_query($bdd,"INSERT INTO commentaires (commentaire, id_utilisateur, date) VALUES ('$com', '$id_user', NOW())");
+            header("Location:livre-or.php");
+          } 
+        ?>
                     <div>
                         <textarea name="com" rows="" cols="" style="width: -moz-available; height:110px"></textarea required><br />
                     </div>
