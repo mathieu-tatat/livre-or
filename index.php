@@ -63,8 +63,8 @@ header("location: index.php");
     <h2><?php if(isset($_SESSION['username'])){ echo$acc;} ?></h2>
 
       <div class="container">
-        <h3>Dans cette espace de discutions il est possible de dialoguer, donner son avis ou soummettre un probleme auquel vos etes confronté, ou bien poser vos questions existentielles.
-          La communauté sera heureuse de vos repondre dans le respect et la tolerence.
+        <h3>Dans cet espace de discution il est possible de dialoguer, donner son avis ou soummettre un probleme auquel vos etes confronté, ou bien poser vos questions existentielles.
+          La communauté sera heureuse de vos repondre dans le respect et la tolérence.
         </h3>
       </div>
 
